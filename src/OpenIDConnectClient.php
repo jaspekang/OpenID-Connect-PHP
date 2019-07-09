@@ -1529,7 +1529,7 @@ class OpenIDConnectClient
      * @param string $state
      * @return string
      */
-    protected function setState($state) {
+    public function setState($state) {
         $this->setSessionKey('openid_connect_state', $state);
         return $state;
     }
@@ -1539,7 +1539,7 @@ class OpenIDConnectClient
      *
      * @return string
      */
-    protected function getState() {
+    public function getState() {
         return $this->getSessionKey('openid_connect_state');
     }
 
@@ -1548,7 +1548,7 @@ class OpenIDConnectClient
      *
      * @return void
      */
-    protected function unsetState() {
+    public function unsetState() {
         $this->unsetSessionKey('openid_connect_state');
     }
 
